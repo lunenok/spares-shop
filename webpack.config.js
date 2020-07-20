@@ -1,4 +1,5 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: `./src/app.js`,
@@ -12,6 +13,33 @@ module.exports = {
     port: 1337,
     historyApiFallback: true,
   },
-  module: {},
-  devtool: `source-map`,
+  devtool: "source-map", // any "source-map"-like devtool is possible
+  module: {
+    rules: [
+      {
+        test: /\.less$/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: "less-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
+      },
+    ],
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: __dirname + "/src/index.html",
+      inject: "body",
+    }),
+  ],
 };
