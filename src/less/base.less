@@ -1,0 +1,69 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/open-sans-v17-latin_cyrillic-regular.woff2")
+      format("woff2"),
+    url("../fonts/open-sans-v17-latin_cyrillic-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/open-sans-v17-latin_cyrillic-700.woff2") format("woff2"),
+    url("../fonts/open-sans-v17-latin_cyrillic-700.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/playfair-display-v21-latin_cyrillic-regular.woff2")
+      format("woff2"),
+    url("../fonts/playfair-display-v21-latin_cyrillic-regular.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/playfair-display-v21-latin_cyrillic-700.woff2")
+      format("woff2"),
+    url("../fonts/playfair-display-v21-latin_cyrillic-regular.woff")
+      format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.page {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  min-width: 320px;
+  box-shadow: 0 0 1px gray;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
