@@ -1,0 +1,21 @@
+.header__wrapper {
+  display: grid;
+  grid-template-columns: [header-left] 1fr [header-centr] 1fr [header-right] 1fr;
+  margin: 0 16px;
+  height: 64px;
+  align-items: center;
+}
+
+.header__nav {
+  justify-self: end;
+  grid-area: header-right;
+}
+
+.header__user-nav {
+  justify-self: end;
+  grid-area: header-centr;
+}
+
+.header__logo {
+  grid-area: header-left;
+}

@@ -1,11 +1,70 @@
-.nav-button {
+.nav-button--container {
   margin: 0;
   padding: 0;
 
   width: 30px;
   height: 30px;
-  border: none;
 
   background-color: transparent;
-  border: 2px solid red;
+  border: none;
+  outline: none;
+}
+
+.nav-button {
+  position: relative;
+
+  display: block;
+  height: 100%;
+}
+
+.nav-button--close::after,
+.nav-button--close::before {
+  position: absolute;
+  left: 50%;
+  top: 0;
+
+  width: 1px;
+  height: 100%;
+
+  background: #313133;
+
+  content: "";
+}
+
+.nav-button--close::after {
+  transform: rotate(45deg);
+}
+
+.nav-button--close::before {
+  transform: rotate(-45deg);
+}
+
+.nav-button--open {
+  left: 50%;
+
+  width: 2px;
+
+  background-color: #313133;
+
+  transform: rotate(90deg);
+}
+
+.nav-button--open::after,
+.nav-button--open::before {
+  position: absolute;
+
+  width: 2px;
+  height: 100%;
+
+  background: #313133;
+
+  content: "";
+}
+
+.nav-button--open::after {
+  right: 500%;
+}
+
+.nav-button--open::before {
+  left: 500%;
 }
