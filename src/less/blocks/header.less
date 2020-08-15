@@ -1,21 +1,21 @@
 .header__wrapper {
-  display: grid;
-  grid-template-columns: [header-left] 1fr [header-centr] 1fr [header-right] 1fr;
-  margin: 0 16px;
+  position: relative;
+  display: flex;
+  padding: 0 5%;
   height: 64px;
   align-items: center;
 }
 
 .header__nav {
-  justify-self: end;
-  grid-area: header-right;
+  order: 3;
+  margin-left: 40px;
 }
 
 .header__user-nav {
-  justify-self: end;
-  grid-area: header-centr;
+  order: 2;
+  margin-left: auto;
 }
 
 .header__logo {
-  grid-area: header-left;
+  order: 1;
 }

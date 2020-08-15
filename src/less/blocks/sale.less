@@ -1,14 +1,29 @@
 .sale__title {
   .playfair_bold;
 
+  position: relative;
+  margin: 0 5%;
+  margin-bottom: 44px;
   font-size: 20px;
   line-height: 27px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: 0;
+    display: block;
+    width: 90px;
+    height: 4px;
+    background-color: #000;
+  }
 }
 
 .sale__nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: 0;
+  margin: 0 5%;
+  margin-bottom: 20px;
   padding: 0;
   list-style: none;
 }
@@ -17,6 +32,10 @@
   font-size: 16px;
   line-height: 25px;
   font-weight: 600;
+
+  &--active {
+    text-decoration: underline;
+  }
 }
 
 .sale__card {
