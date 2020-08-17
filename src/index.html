@@ -3,7 +3,7 @@
   <head>
   <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Дизайнерская мебель "Callium"</title>
   </head>
   <body class="page">
     <header class="page-header">
@@ -62,10 +62,14 @@
           <li class="swiper__item">
             <div class="swiper__img-container">
               <picture>
-                <source srcset="/image/content/main_chair_mobile_1@1.jpg 1x, /image/content/main_chair_mobile_1@2.jpg 2x">
+                <source
+                  media="(min-width: 768px)"
+                  srcset="/image/content/main_chair_desktop_1@1.jpg 1x, /image/content/main_chair_desktop_1@2.jpg 2x"
+                 >
                 <img
                 class="swiper__img"
-                src="/image/content/main_chair_1@1.jpg"
+                src="/image/content/main_chair_mobile_1@1.jpg"
+                srcset="/image/content/main_chair_mobile_1@2.jpg 2x"
                 alt="Кресло Антиква"
                 width="277"
                 height="327"
@@ -162,7 +166,7 @@
               </picture>
             </a>
           </div>
-          <div class="new-items__item">
+          <div class="new-items__item new-items__item--big">
             <a href="#" class="new-items__link">
               <h3 class="new-items__name">
                 Стул офисный «Белый шоколад»

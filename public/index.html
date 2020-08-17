@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
-    <meta charset="UTF-8" />
+  <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Дизайнерская мебель "Callium"</title>
   </head>
   <body class="page">
     <header class="page-header">
@@ -17,15 +17,15 @@
             height="20"
           />
         </a>
-        <nav class="header__nav navitagion">
-          <button class="navigation__button nav-button--container">
-            <span class="nav-button nav-button--open"></span>
-          </button>
-          <ul class="navigation__list visually-hidden">
+        <nav class="header__nav navigation">
+          <ul class="navigation__list">
             <li class="navigation__item">Мебель</li>
             <li class="navigation__item">Освещение</li>
             <li class="navigation__item">Текстиль</li>
           </ul>
+          <button class="navigation__button nav-button--container">
+            <span class="nav-button nav-button--open"></span>
+          </button>
         </nav>
         <ul class="header__user-nav user-nav__list">
           <li class="user-nav__item">
@@ -58,133 +58,129 @@
         Дизайнерская мебель
       </h1>
       <section class="swiper">
-          <ul class="swiper__list">
-            <li class="swiper__item">
-              <div class="swiper__img-container">
-                <picture>
-                  <source srcset="/image/content/main_chair_mobile_1@1.jpg 1x, /image/content/main_chair_mobile_1@2.jpg 2x">
-                  <img
-                  class="swiper__img"
-                  src="/image/content/main_chair_1@1.jpg"
-                  alt="Кресло Антиква"
-                  width="277"
-                  height="327"
-                  />
-                </picture>
-              </div>
-              <div class="swiper__info-container">
-                <h2 class="swipper__title">Дизайнерская мебель</h2>
-                <h3 class="swipper__name">Кресло "Антиква"</h3>
-                <p class="swiper__price">
-                  $380<span class="swiper__price--stock">$240</span>
-                </p>
-                <a class="swiper__button" href="#">Купить</a>
-              </div>
-            </li>
-            <!-- <li class="swiper__item">
+        <ul class="swiper__list">
+          <li class="swiper__item">
+            <div class="swiper__img-container">
+              <picture>
+                <source srcset="/image/content/main_chair_mobile_1@1.jpg 1x, /image/content/main_chair_mobile_1@2.jpg 2x">
+                <source srcset="/image/content/main_chair_desktop_1@1.jpg 1x, /image/content/main_chair_desktop_1@2.jpg 2x" media="(max-width: 768px)">
+                <img
+                class="swiper__img"
+                src="/image/content/main_chair_1@1.jpg"
+                alt="Кресло Антиква"
+                width="277"
+                height="327"
+                />
+              </picture>
+            </div>
+            <div class="swiper__info-container">
               <h2 class="swipper__title">Дизайнерская мебель</h2>
               <h3 class="swipper__name">Кресло "Антиква"</h3>
               <p class="swiper__price">
                 $380<span class="swiper__price--stock">$240</span>
               </p>
-              <a href="#" class="swiper__button">Купить</a>
-              <img src="" alt="" class="swiper__img" />
-            </li>
-            <li class="swiper__item">
-              <h2 class="swipper__title">Дизайнерская мебель</h2>
-              <h3 class="swipper__name">Кресло "Антиква"</h3>
-              <p class="swiper__price">
-                $380<span class="swiper__price--stock">$240</span>
-              </p>
-              <a href="#" class="swiper__button">Купить</a>
-              <img src="" alt="" class="swiper__img" />
-            </li>
-            <li class="swiper__item">
-              <h2 class="swipper__title">Дизайнерская мебель</h2>
-              <h3 class="swipper__name">Кресло "Антиква"</h3>
-              <p class="swiper__price">
-                $380<span class="swiper__price--stock">$240</span>
-              </p>
-              <a href="#" class="swiper__button">Купить</a>
-              <img src="" alt="" class="swiper__img" />
-            </li> -->
-          </ul>
-          <div class="swiper__scroll"></div>
-        </div>
+              <a class="swiper__button" href="#">Купить</a>
+            </div>
+          </li>
+          <!-- <li class="swiper__item">
+            <h2 class="swipper__title">Дизайнерская мебель</h2>
+            <h3 class="swipper__name">Кресло "Антиква"</h3>
+            <p class="swiper__price">
+              $380<span class="swiper__price--stock">$240</span>
+            </p>
+            <a href="#" class="swiper__button">Купить</a>
+            <img src="" alt="" class="swiper__img" />
+          </li>
+          <li class="swiper__item">
+            <h2 class="swipper__title">Дизайнерская мебель</h2>
+            <h3 class="swipper__name">Кресло "Антиква"</h3>
+            <p class="swiper__price">
+              $380<span class="swiper__price--stock">$240</span>
+            </p>
+            <a href="#" class="swiper__button">Купить</a>
+            <img src="" alt="" class="swiper__img" />
+          </li>
+          <li class="swiper__item">
+            <h2 class="swipper__title">Дизайнерская мебель</h2>
+            <h3 class="swipper__name">Кресло "Антиква"</h3>
+            <p class="swiper__price">
+              $380<span class="swiper__price--stock">$240</span>
+            </p>
+            <a href="#" class="swiper__button">Купить</a>
+            <img src="" alt="" class="swiper__img" />
+          </li> -->
+        </ul>
+        <div class="swiper__scroll"></div>
       </section>
       <section class="new-items">
         <div class="new-items__wrapper">
           <h2 class="new-items__title">Новинки</h2>
-          <ul class="new-items__list">
-            <li class="new-items__item">
-              <a href="#" class="new-items__link">
-                <h3 class="new-items__name">Стул «Смеркается»</h3>
-                <span class="new-items__price">$280</span>
-                <picture>
-                  <source srcset="/image/content/twilight-chair-mobile@1.png 1x, /image/content/twilight-chair-mobile@2.png 2x">
-                  <img
-                    class="new-items__img"
-                    src="/image/content/twilight-chair-mobile@1.png"
-                    width="175"
-                    height="169"
-                    alt="Стул «Смерткается»"
-                  />  
-                </picture>
-
-              </a>
-            </li>
-            <li class="new-items__item">
-              <a href="#" class="new-items__link">
-                <h3 class="new-items__name">Стол «Крем брюле»</h3>
-                <span class="new-items__price">$320</span>
-                <picture>
-                  <source srcset="/image/content/creme-brulee-table-mobile@1.png 1x, /image/content/creme-brulee-table-mobile@2.png 2x">
-                  <img
-                    class="new-items__img"
-                    src="/image/content/creme-brulee-table-mobile@1.png"
-                    width="270"
-                    height="198"
-                    alt="Стол «Крем брюле»"
+          <div class="new-items__item">
+            <a href="#" class="new-items__link">
+              <h3 class="new-items__name">Стул «Смеркается»</h3>
+              <span class="new-items__price">$280</span>
+              <picture class="new-items__img-container">
+                <source srcset="/image/content/twilight-chair-mobile@1.png 1x, /image/content/twilight-chair-mobile@2.png 2x">
+                <img
+                  class="new-items__img new-items__img--twilight"
+                  src="/image/content/twilight-chair-mobile@1.png"
+                  width="175"
+                  height="169"
+                  alt="Стул «Смерткается»"
+                />
+              </picture>
+            </a>
+          </div>
+          <div class="new-items__item">
+            <a href="#" class="new-items__link">
+              <h3 class="new-items__name">Стол «Крем брюле»</h3>
+              <span class="new-items__price">$320</span>
+              <picture class="new-items__img-container">
+                <source srcset="/image/content/creme-brulee-table-mobile@1.png 1x, /image/content/creme-brulee-table-mobile@2.png 2x">
+                <img
+                  class="new-items__img"
+                  src="/image/content/creme-brulee-table-mobile@1.png"
+                  width="270"
+                  height="198"
+                  alt="Стол «Крем брюле»"
                   />
                 </picture>
-              </a>
-            </li>
-            <li class="new-items__item">
-              <a href="#" class="new-items__link">
-                <h3 class="new-items__name">Люстра «Облако»</h3>
-                <span class="new-items__price">$250</span>
-                <picture>
-                  <source srcset="/image/content/cloud-chandelier-mobile@1.png 1x, /image/content/cloud-chandelier-mobile@2.png 2x">
-                  <img
-                    class="new-items__img"
-                    src="/image/content/cloud-chandelier-mobile@1.png"
-                    width="202"
-                    height="226"
-                    alt="Люстра «Облако»"
-                  />
-                </picture>
-              </a>
-            </li>
-            <li class="new-items__item">
-              <a href="#" class="new-items__link">
-                <h3 class="new-items__name">
-                  Стул офисный «Белый шоколад&raquo;
-                </h3>
-                <span class="new-items__price">$120</span>
-                <picture>
-                  <source srcset="/image/content/white-choc-chair-mobile@1.png 1x, /image/content/white-choc-chair-mobile@2.png 2x">
-                  <img
-                    class="new-items__img"
-                    src="/image/content/white-choc-chair-mobile@1.png"
-                    width="209"
-                    height="199"
-                    alt="Стул офисный «Белый шоколад»"
-                  />
-                </picture>
-
-              </a>
-            </li>
-          </ul>
+            </a>
+          </div>
+          <div class="new-items__item">
+            <a href="#" class="new-items__link">
+              <h3 class="new-items__name">Люстра «Облако»</h3>
+              <span class="new-items__price">$250</span>
+              <picture class="new-items__img-container">
+                <source srcset="/image/content/cloud-chandelier-mobile@1.png 1x, /image/content/cloud-chandelier-mobile@2.png 2x">
+                <img
+                  class="new-items__img"
+                  src="/image/content/cloud-chandelier-mobile@1.png"
+                  width="202"
+                  height="226"
+                  alt="Люстра «Облако»"
+                />
+              </picture>
+            </a>
+          </div>
+          <div class="new-items__item new-items__item--big">
+            <a href="#" class="new-items__link">
+              <h3 class="new-items__name">
+                Стул офисный «Белый шоколад»
+              </h3>
+              <span class="new-items__price">$120</span>
+              <picture class="new-items__img-container">
+                <source srcset="/image/content/white-choc-chair-mobile@1.png 1x, /image/content/white-choc-chair-mobile@2.png 2x">
+                <img
+                  class="new-items__img"
+                  src="/image/content/white-choc-chair-mobile@1.png"
+                  width="209"
+                  height="199"
+                  alt="Стул офисный «Белый шоколад»"
+                />
+              </picture>
+            </a>
+          </div>
         </div>
       </section>
       <section class="reviews">
@@ -213,7 +209,7 @@
         <div class="sale__wrapper">
           <h2 class="sale__title">Последний шанс</h2>
           <ul class="sale__nav">
-            <li class="sale__nav-item">Стулья</li>
+            <li class="sale__nav-item sale__nav-item--active">Стулья</li>
             <li class="sale__nav-item">Диваны</li>
             <li class="sale__nav-item">Кресла</li>
           </ul>
@@ -223,60 +219,71 @@
               <p class="sale__card--price">
                 $195 <span class="sale__card--old-price">$245</span>
               </p>
-              <img
-                class="card__img"
-                src="/image/content/extra_product_1@1.png"
-                alt="Стул «Карамель»"
-              />
-              <a href="" class="card__link">Купить</a>
+              <picture class="card__img">
+                <source srcset="/image/content/extra-chance-first@1.jpg 1x, /image/content/extra-chance-first@2.jpg 2x">
+                <img
+                  src="/image/content/extra-chance-first@1.jpg"
+                  alt="Стул «Карамель»"
+                />
+              </picture>
+
+              <!-- <a href="" class="card__link">Купить</a> -->
             </a>
             <a class="sale__card" href="#">
               <h3 class="sale__card--title">Стул «Облако»</h3>
               <p class="sale__card--price">
                 $200 <span class="sale__card--old-price">$250</span>
               </p>
-              <img
-                class="card__img"
-                src="/image/content/extra_product_2@1.png"
-                alt="Стул «Облако»"
-              />
-              <a href="" class="card__link">Купить</a>
+              <picture class="card__img">
+                <source  srcset="/image/content/extra-chance-second@1.jpg 1x /image/content/extra-chance-second@2.jpg 2x">
+                <img
+                  src="/image/content/extra-chance-second@1.jpg"
+                  alt="Стул «Облако»"
+                />
+              </picture>
+              <!-- <a href="" class="card__link">Купить</a> -->
             </a>
             <a class="sale__card" href="#">
               <h3 class="sale__card--title">Стул «Сова»</h3>
               <p class="sale__card--price">
                 $240 <span class="sale__card--old-price">$260</span>
               </p>
-              <img
-                class="card__img"
-                src="/image/content/extra_product_3@1.png"
-                alt="Стул «Сова»"
-              />
-              <a href="" class="card__link">Купить</a>
+              <picture class="card__img">
+                <source srcset="/image/content/extra-change-third@1.jpg 1x, /image/content/extra-change-third@2.jpg 2x">
+                <img
+                  src="/image/content/extra-change-third@1.jpg"
+                  alt="Стул «Сова»"
+                />
+              </picture>
+              <!-- <a href="" class="card__link">Купить</a> -->
             </a>
             <a class="sale__card" href="#">
               <h3 class="sale__card--title">Стул «Мая»</h3>
               <p class="sale__card--price">
                 $280 <span class="sale__card--old-price">$330</span>
               </p>
-              <img
-                class="card__img"
-                src="/image/content/extra_product_4@1.png"
-                alt="Стул «Мая»"
-              />
-              <a href="" class="card__link">Купить</a>
+              <picture class="card__img">
+                <source srcset="/image/content/extra-change-fourth@1.jpg 1x, /image/content/extra-change-fourth@2.jpg 2x">
+                <img
+                  src="/image/content/extra-change-fourth@1.jpg"
+                  alt="Стул «Мая»"
+                />
+              </picture>
+              <!-- <a href="" class="card__link">Купить</a> -->
             </a>
             <a class="sale__card" href="#">
               <h3 class="sale__card--title">Стул «Месси»</h3>
               <p class="sale__card--price">
                 $280 <span class="sale__card--old-price">$305</span>
               </p>
-              <img
-                class="card__img"
-                src="/image/content/extra_product_5@1.png"
-                alt="Стул «Месси»"
-              />
-              <a href="" class="card__link">Купить</a>
+              <picture class="card__img">
+                <source srcset="/image/content/extra-chance-fifth@1.jpg 1x, /image/content/extra-chance-fifth@2.jpg 2x">
+                <img
+                  src="/image/content/extra-chance-fifth@1.jpg"
+                  alt="Стул «Месси»"
+                />
+              </picture>
+              <!-- <a href="" class="card__link">Купить</a> -->
             </a>
           </div>
         </div>

@@ -15,8 +15,8 @@
       to right,
       #fff 0%,
       #fff 50%,
-      #fceae8 50%,
-      #fceae8 100%
+      @pinkcolor 50%,
+      @pinkcolor 100%
     );
 }
 
@@ -26,6 +26,7 @@
 }
 
 .swiper__info-container {
+  width: 90%;
   margin: 0 5%;
 }
 
@@ -58,7 +59,53 @@
 .swiper__button {
   .default_button;
 
+  width: 100%;
   padding: 18px 0;
   font-size: 16px;
   line-height: 22px;
+}
+
+@media (min-width: @tablet-width) {
+  .swiper__item {
+    margin-left: 5%;
+    display: flex;
+  }
+
+  .swiper__img-container {
+    margin-left: auto;
+    margin-bottom: 0;
+    order: 2;
+  }
+
+  .swiper__info-container {
+    margin: auto 0;
+    width: 47%;
+  }
+
+  .swiper__img {
+    width: 532px;
+    height: 751px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .swiper__item {
+    margin: 0 auto;
+    max-width: 1162px;
+  }
+
+  .swiper__list {
+    background:
+      linear-gradient(
+        to right,
+        #fff 0%,
+        #fff 80%,
+        @pinkcolor 80%,
+        @pinkcolor 100%
+      );
+  }
+  // .swiper__info-container {
+  //   margin: auto;
+  //   max-width: 1200px;
+  // }
 }

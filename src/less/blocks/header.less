@@ -19,3 +19,30 @@
 .header__logo {
   order: 1;
 }
+
+@media (min-width: @tablet-width) {
+  .header__wrapper {
+    margin: 0 5%;
+    padding: 0 5%;
+    padding-top: 85px;
+    max-width: 992px;
+  }
+
+  .header__nav {
+    order: 2;
+    margin-left: 128px;
+  }
+
+  .header__user-nav {
+    order: 3;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header__wrapper {
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 85px;
+    max-width: 1162px;
+  }
+}

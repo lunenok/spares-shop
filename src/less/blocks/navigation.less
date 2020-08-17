@@ -8,6 +8,17 @@
   list-style: none;
 }
 
+.navigation__item {
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
 .navigation--open {
   position: absolute;
   top: 0;
@@ -25,9 +36,6 @@
     .navigation__item {
       margin: 0;
       margin-bottom: 65px;
-      font-size: 18px;
-      line-height: 25px;
-      text-transform: uppercase;
       text-align: center;
       color: #fff;
 
@@ -49,4 +57,23 @@
   width: 20px;
   height: 2px;
   transform: rotate(45deg);
+}
+
+@media (min-width: @tablet-width) {
+  .navigation__button {
+    display: none;
+  }
+
+  .navigation__list {
+    display: flex;
+    padding: 0;
+  }
+
+  .navigation--open {
+    display: none;
+  }
+
+  .navigation__item {
+    margin-right: 60px;
+  }
 }
