@@ -8,3 +8,33 @@
 .user-nav__item {
   margin-left: 20px;
 }
+
+.user-nav__item--basket .user-nav__link {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: "Avenir Next", "Arial", sans-serif;
+  text-decoration: none;
+  color: #fff;
+
+  &::before {
+    position: absolute;
+    top: -18px;
+    left: 15px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #000;
+    content: "";
+  }
+}
+
+.user-nav__basket-count {
+  position: absolute;
+  top: -17px;
+  right: -3px;
+}
+
+.user-nav__item--basket span {
+  text-decoration: none;
+}

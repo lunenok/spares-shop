@@ -1,5 +1,6 @@
 import "./less/style.less";
 import "./image/svg/logo.svg";
+import "./js/scroller.js";
 
 const menuButton = document.querySelector('.navigation__button');
 const navigation = document.querySelector('.navigation');

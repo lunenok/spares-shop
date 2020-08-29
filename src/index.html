@@ -31,7 +31,7 @@
           <li class="user-nav__item">
             <a href="#" class="user-nav__link">
               <img
-                class="user-nav--image"
+                class="user-nav-image"
                 src="/image/svg/search.svg"
                 alt="Поиск по сайту"
                 width="24"
@@ -39,15 +39,16 @@
               />
             </a>
           </li>
-          <li class="user-nav__item">
+          <li class="user-nav__item user-nav__item--basket">
             <a href="#" class="user-nav__link">
               <img
-                class="user-nav--image"
+                class="user-nav-image"
                 src="/image/svg/basket.svg"
                 alt="Корзина"
                 width="=35"
                 height="30"
               />
+              <span class="user-nav__basket-count">3</span>
             </a>
           </li>
         </ul>
@@ -309,6 +310,16 @@
               </div>
               <!-- <a href="" class="card__link">Купить</a> -->
             </a>
+          </div>
+          <div class="sale__slider-container">
+            <div class="sale__slider-button-container">
+              <button class="sale__slider-button sale__slider-button--active"></button>
+              <button class="sale__slider-button"></button>
+              <button class="sale__slider-button"></button>
+              <button class="sale__slider-button"></button>
+              <button class="sale__slider-button"></button>
+            </div>
+            <span class="sale__slider-counter">01/05</span>
           </div>
         </div>
       </section>
