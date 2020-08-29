@@ -1,8 +1,13 @@
+.reviews {
+  margin-bottom: 100px;
+}
+
 .reviews__wrapper {
   display: grid;
-  grid-template-columns: 1fr 660px 1fr;
+  grid-template-columns: 1fr 80% 1fr;
   margin: 0 auto;
-  width: 830px;
+  padding: 0 50px;
+  max-width: 824px;
 }
 
 .reviews__button {
@@ -49,7 +54,13 @@
   color: #444348;
 }
 
-@media (max-width: 840px) {
+@media (min-width: @desktop-width) {
+  .reviews {
+    padding: 0 135px;
+  }
+}
+
+@media (max-width: @mobile-width) {
   .reviews__wrapper {
     display: none;
   }

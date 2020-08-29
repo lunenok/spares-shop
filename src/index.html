@@ -58,62 +58,71 @@
         Дизайнерская мебель
       </h1>
       <section class="swiper">
-        <ul class="swiper__list">
-          <li class="swiper__item">
-            <div class="swiper__img-container">
-              <picture>
-                <source
-                  media="(min-width: 768px)"
-                  srcset="/image/content/main_chair_desktop_1@1.jpg 1x, /image/content/main_chair_desktop_1@2.jpg 2x"
-                 >
-                <img
-                class="swiper__img"
-                src="/image/content/main_chair_mobile_1@1.jpg"
-                srcset="/image/content/main_chair_mobile_1@2.jpg 2x"
-                alt="Кресло Антиква"
-                width="277"
-                height="327"
-                />
-              </picture>
-            </div>
-            <div class="swiper__info-container">
+        <div class="swiper__wrapper">
+          <ul class="swiper__list">
+            <li class="swiper__item">
+              <div class="swiper__img-container">
+                <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="/image/content/main_chair_desktop_1@1.jpg 1x, /image/content/main_chair_desktop_1@2.jpg 2x"
+                   >
+                  <img
+                  class="swiper__img"
+                  src="/image/content/main_chair_mobile_1@1.jpg"
+                  srcset="/image/content/main_chair_mobile_1@2.jpg 2x"
+                  alt="Кресло Антиква"
+                  width="277"
+                  height="327"
+                  />
+                </picture>
+              </div>
+              <div class="swiper__info-container">
+                <h2 class="swiper__title">Дизайнерская мебель</h2>
+                <h3 class="swiper__name">Кресло "Антиква"</h3>
+                <p class="swiper__price">
+                  $380<span class="swiper__price--stock">$240</span>
+                </p>
+                <a class="swiper__button" href="#">Купить</a>
+              </div>
+            </li>
+            <!-- <li class="swiper__item">
               <h2 class="swipper__title">Дизайнерская мебель</h2>
               <h3 class="swipper__name">Кресло "Антиква"</h3>
               <p class="swiper__price">
                 $380<span class="swiper__price--stock">$240</span>
               </p>
-              <a class="swiper__button" href="#">Купить</a>
-            </div>
-          </li>
-          <!-- <li class="swiper__item">
-            <h2 class="swipper__title">Дизайнерская мебель</h2>
-            <h3 class="swipper__name">Кресло "Антиква"</h3>
-            <p class="swiper__price">
-              $380<span class="swiper__price--stock">$240</span>
-            </p>
-            <a href="#" class="swiper__button">Купить</a>
-            <img src="" alt="" class="swiper__img" />
-          </li>
-          <li class="swiper__item">
-            <h2 class="swipper__title">Дизайнерская мебель</h2>
-            <h3 class="swipper__name">Кресло "Антиква"</h3>
-            <p class="swiper__price">
-              $380<span class="swiper__price--stock">$240</span>
-            </p>
-            <a href="#" class="swiper__button">Купить</a>
-            <img src="" alt="" class="swiper__img" />
-          </li>
-          <li class="swiper__item">
-            <h2 class="swipper__title">Дизайнерская мебель</h2>
-            <h3 class="swipper__name">Кресло "Антиква"</h3>
-            <p class="swiper__price">
-              $380<span class="swiper__price--stock">$240</span>
-            </p>
-            <a href="#" class="swiper__button">Купить</a>
-            <img src="" alt="" class="swiper__img" />
-          </li> -->
-        </ul>
-        <div class="swiper__scroll"></div>
+              <a href="#" class="swiper__button">Купить</a>
+              <img src="" alt="" class="swiper__img" />
+            </li>
+            <li class="swiper__item">
+              <h2 class="swipper__title">Дизайнерская мебель</h2>
+              <h3 class="swipper__name">Кресло "Антиква"</h3>
+              <p class="swiper__price">
+                $380<span class="swiper__price--stock">$240</span>
+              </p>
+              <a href="#" class="swiper__button">Купить</a>
+              <img src="" alt="" class="swiper__img" />
+            </li>
+            <li class="swiper__item">
+              <h2 class="swipper__title">Дизайнерская мебель</h2>
+              <h3 class="swipper__name">Кресло "Антиква"</h3>
+              <p class="swiper__price">
+                $380<span class="swiper__price--stock">$240</span>
+              </p>
+              <a href="#" class="swiper__button">Купить</a>
+              <img src="" alt="" class="swiper__img" />
+            </li> -->
+          </ul>
+          <div class="swiper__scroll">
+            <ul class="swiper__control-list">
+              <li class="swiper__control-item swiper__control-item--active">01</li>
+              <li class="swiper__control-item">02</li>
+              <li class="swiper__control-item">03</li>
+              <li class="swiper__control-item">04</li>
+            </ul>
+          </div>
+        </div>
       </section>
       <section class="new-items">
         <div class="new-items__wrapper">
@@ -222,14 +231,18 @@
               <p class="sale__card--price">
                 $195 <span class="sale__card--old-price">$245</span>
               </p>
-              <picture class="card__img">
-                <source srcset="/image/content/extra-chance-first@1.jpg 1x, /image/content/extra-chance-first@2.jpg 2x">
-                <img
-                  src="/image/content/extra-chance-first@1.jpg"
-                  alt="Стул «Карамель»"
-                />
-              </picture>
-
+              <div class="card__image-container">
+                <picture>
+                  <source srcset="/image/content/extra-chance-first@1.jpg 1x, /image/content/extra-chance-first@2.jpg 2x">
+                  <img
+                    class="card__image"
+                    src="/image/content/extra-chance-first@1.jpg"
+                    alt="Стул «Карамель»"
+                    width="232"
+                    height="287"
+                  />
+                </picture>
+              </div>
               <!-- <a href="" class="card__link">Купить</a> -->
             </a>
             <a class="sale__card" href="#">
@@ -237,13 +250,15 @@
               <p class="sale__card--price">
                 $200 <span class="sale__card--old-price">$250</span>
               </p>
-              <picture class="card__img">
-                <source  srcset="/image/content/extra-chance-second@1.jpg 1x /image/content/extra-chance-second@2.jpg 2x">
-                <img
-                  src="/image/content/extra-chance-second@1.jpg"
-                  alt="Стул «Облако»"
-                />
-              </picture>
+              <div class="card__image-container">
+                <picture>
+                  <source  srcset="/image/content/extra-chance-second@1.jpg 1x /image/content/extra-chance-second@2.jpg 2x">
+                  <img
+                    src="/image/content/extra-chance-second@1.jpg"
+                    alt="Стул «Облако»"
+                  />
+                </picture>
+              </div>
               <!-- <a href="" class="card__link">Купить</a> -->
             </a>
             <a class="sale__card" href="#">
@@ -251,13 +266,15 @@
               <p class="sale__card--price">
                 $240 <span class="sale__card--old-price">$260</span>
               </p>
-              <picture class="card__img">
-                <source srcset="/image/content/extra-change-third@1.jpg 1x, /image/content/extra-change-third@2.jpg 2x">
-                <img
-                  src="/image/content/extra-change-third@1.jpg"
-                  alt="Стул «Сова»"
-                />
-              </picture>
+              <div class="card__image-container">
+                <picture>
+                  <source srcset="/image/content/extra-change-third@1.jpg 1x, /image/content/extra-change-third@2.jpg 2x">
+                  <img
+                    src="/image/content/extra-change-third@1.jpg"
+                    alt="Стул «Сова»"
+                  />
+                </picture>
+              </div>
               <!-- <a href="" class="card__link">Купить</a> -->
             </a>
             <a class="sale__card" href="#">
@@ -265,13 +282,15 @@
               <p class="sale__card--price">
                 $280 <span class="sale__card--old-price">$330</span>
               </p>
-              <picture class="card__img">
-                <source srcset="/image/content/extra-change-fourth@1.jpg 1x, /image/content/extra-change-fourth@2.jpg 2x">
-                <img
-                  src="/image/content/extra-change-fourth@1.jpg"
-                  alt="Стул «Мая»"
-                />
-              </picture>
+              <div class="card__image-container">
+                <picture>
+                  <source srcset="/image/content/extra-change-fourth@1.jpg 1x, /image/content/extra-change-fourth@2.jpg 2x">
+                  <img
+                    src="/image/content/extra-change-fourth@1.jpg"
+                    alt="Стул «Мая»"
+                  />
+                </picture>
+              </div>
               <!-- <a href="" class="card__link">Купить</a> -->
             </a>
             <a class="sale__card" href="#">
@@ -279,13 +298,15 @@
               <p class="sale__card--price">
                 $280 <span class="sale__card--old-price">$305</span>
               </p>
-              <picture class="card__img">
-                <source srcset="/image/content/extra-chance-fifth@1.jpg 1x, /image/content/extra-chance-fifth@2.jpg 2x">
-                <img
-                  src="/image/content/extra-chance-fifth@1.jpg"
-                  alt="Стул «Месси»"
-                />
-              </picture>
+              <div class="card__image-container">
+                <picture>
+                  <source srcset="/image/content/extra-chance-fifth@1.jpg 1x, /image/content/extra-chance-fifth@2.jpg 2x">
+                  <img
+                    src="/image/content/extra-chance-fifth@1.jpg"
+                    alt="Стул «Месси»"
+                  />
+                </picture>
+              </div>
               <!-- <a href="" class="card__link">Купить</a> -->
             </a>
           </div>

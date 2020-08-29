@@ -3,7 +3,8 @@
 }
 
 .footer__wrapper {
-  margin: 0 5%;
+  margin: 0 20px;
+  padding-top: 30px;
 }
 
 .footer__logo {
@@ -11,13 +12,14 @@
 }
 
 .footer__contacts {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 20px;
 }
 
 .footer__contact {
   margin-bottom: 20px;
+  margin-right: 74px;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 19px;
@@ -30,23 +32,28 @@
 }
 
 .footer__nav-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
+  margin-bottom: -20px;
   padding: 0;
   list-style: none;
 }
 
 .footer__nav-item {
   margin-bottom: 20px;
+  margin-right: 60px;
 }
 
 .footer__nav-link {
   font-family: "Avenir Next", "Arial", sans-serif;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: bold;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
   letter-spacing: 0.05em;
+  font-weight: normal;
   color: @darkcolor;
 }
 
@@ -59,4 +66,50 @@
   text-align: center;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: @tablet-width) {
+  .footer__wrapper {
+    padding: 0 20px;
+  }
+
+  .footer__nav-list {
+    flex-direction: row-reverse;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .footer__wrapper {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    grid-template-areas:
+      "icon nav"
+      "contact contact"
+      "info info";
+    margin: 0 auto;
+    max-width: 1210px;
+    padding-top: 100px;
+  }
+
+  .logo {
+    grid-area: icon;
+  }
+
+  .footer__nav {
+    grid-area: nav;
+    margin-left: auto;
+  }
+
+  .footer__nav-item {
+    margin: 0;
+    margin-left: 60px;
+  }
+
+  .footer__contacts {
+    grid-area: contact;
+  }
+
+  .footer__info {
+    grid-area: info;
+  }
 }
