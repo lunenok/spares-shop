@@ -88,23 +88,19 @@ function debounce(func, ms) {
 const indicators = document.querySelectorAll('.sale__slider-button')
 const scroller = document.querySelector('.sale__card-container')
 
-// function setAriaLabels() {
-//   indicators.forEach((indicator, i) => {
-//     indicator.setAttribute('aria-label', `Scroll to item #${i + 1}`)
-//   })
-// }
-
-// function setAriaPressed(index) {
-//   indicators.forEach((indicator, i) => {
-//     indicator.setAttribute('aria-pressed', !!(i === index))
-//   })
-// }
+function setButtonChecked(buttons ,index) {
+  buttons.forEach((item, i) => {
+    item.classList.remove(`sale__slider-button--active`);
+    if (i === index) {
+      item.classList.add(`sale__slider-button--active`);
+    }
+  })
+}
 
 indicators.forEach((indicator, i) => {
   indicator.addEventListener('click', e => {
     e.preventDefault()
     e.stopPropagation()
-    // setAriaPressed(i)
     const scrollLeft = Math.floor(scroller.scrollWidth * (i / ITEM_COUNT))
     smoothScroll(scroller, scrollLeft, true)
   })
@@ -112,7 +108,5 @@ indicators.forEach((indicator, i) => {
 
 scroller.addEventListener('scroll', debounce(() => {
   let index = Math.round((scroller.scrollLeft / scroller.scrollWidth) * ITEM_COUNT)
-  // setAriaPressed(index)
-}, 200))
-
-// setAriaLabels()
+  setButtonChecked(indicators, index);
+}, 50))
