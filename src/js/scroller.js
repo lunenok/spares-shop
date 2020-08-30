@@ -1,4 +1,6 @@
 // via https://github.com/tootsuite/mastodon/blob/f59ed3a4fafab776b4eeb92f805dfe1fecc17ee3/app/javascript/mastodon/scroll.js
+
+// common function
 const ITEM_COUNT = 5;
 
 const easingOutQuint = (x, t, b, c, d) =>
@@ -85,28 +87,81 @@ function debounce(func, ms) {
 	}
 }
 
-const indicators = document.querySelectorAll('.sale__slider-button')
-const scroller = document.querySelector('.sale__card-container')
+// sales scroll
+{
+  const SALE_ITEM_COUNT = 5;
+  const saleIndicators = document.querySelectorAll('.sale__slider-button')
+  const saleScroller  = document.querySelector('.sale__card-container')
 
-function setButtonChecked(buttons ,index) {
-  buttons.forEach((item, i) => {
-    item.classList.remove(`sale__slider-button--active`);
-    if (i === index) {
-      item.classList.add(`sale__slider-button--active`);
-    }
+  function setButtonChecked(buttons ,index) {
+    buttons.forEach((item, i) => {
+      item.classList.remove(`sale__slider-button--active`);
+      if (i === index) {
+        item.classList.add(`sale__slider-button--active`);
+      }
+    })
+  }
+
+  saleIndicators.forEach((indicator, i) => {
+    indicator.addEventListener('click', e => {
+      e.preventDefault()
+      e.stopPropagation()
+      const scrollLeft = Math.floor(saleScroller.scrollWidth * (i / SALE_ITEM_COUNT))
+      smoothScroll(saleScroller , scrollLeft, true)
+    })
   })
+
+  saleScroller .addEventListener('scroll', debounce(() => {
+    let index = Math.round((saleScroller .scrollLeft / saleScroller .scrollWidth) * SALE_ITEM_COUNT)
+    setButtonChecked(saleIndicators, index);
+  }, 50))
 }
 
-indicators.forEach((indicator, i) => {
-  indicator.addEventListener('click', e => {
-    e.preventDefault()
-    e.stopPropagation()
-    const scrollLeft = Math.floor(scroller.scrollWidth * (i / ITEM_COUNT))
-    smoothScroll(scroller, scrollLeft, true)
-  })
-})
+// review scroll
+{
+  const REVIEW_ITEM_COUNT = 4;
+  const reviewIndicators = document.querySelectorAll('.reviews__slider-button');
+  const reviewScroller = document.querySelector('.reviews-container');
+  const backButton = document.querySelector(`.reviews__button--back`);
+  const forwardButton = document.querySelector(`.reviews__button--forward`)
 
-scroller.addEventListener('scroll', debounce(() => {
-  let index = Math.round((scroller.scrollLeft / scroller.scrollWidth) * ITEM_COUNT)
-  setButtonChecked(indicators, index);
-}, 50))
+  function setReviewButtonChecked(buttons ,index) {
+    buttons.forEach((item, i) => {
+      item.classList.remove(`reviews__slider-button--active`);
+      if (i === index) {
+        item.classList.add(`reviews__slider-button--active`);
+      }
+    })
+  }
+
+  forwardButton.addEventListener('click', e => {
+    e.preventDefault();
+    const itemWidth = reviewScroller.scrollWidth / REVIEW_ITEM_COUNT;
+    const currentPosition = reviewScroller.scrollLeft;
+    const scrollLeft = currentPosition + itemWidth;
+    smoothScroll(reviewScroller, scrollLeft, true);
+  });
+
+  backButton.addEventListener('click', e => {
+    e.preventDefault();
+    const itemWidth = reviewScroller.scrollWidth / REVIEW_ITEM_COUNT;
+    const currentPosition = reviewScroller.scrollLeft;
+    const scrollLeft = currentPosition - itemWidth;
+    smoothScroll(reviewScroller, scrollLeft, true);
+  });
+
+  reviewIndicators.forEach((indicator, i) => {
+    indicator.addEventListener('click', e => {
+      e.preventDefault();
+      e.stopPropagation();
+      const scrollLeft = Math.floor(reviewScroller.scrollWidth * (i / REVIEW_ITEM_COUNT));
+      smoothScroll(reviewScroller, scrollLeft, true);
+    })
+  });
+
+  reviewScroller.addEventListener('scroll', debounce(() => {
+    let index = Math.round((reviewScroller.scrollLeft / reviewScroller.scrollWidth) * REVIEW_ITEM_COUNT);
+    setReviewButtonChecked(reviewIndicators, index);
+  }, 50))
+}
+

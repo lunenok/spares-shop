@@ -27,10 +27,25 @@
   }
 }
 
-.review {
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(4, 100%);
   margin: 0 auto;
   margin-bottom: 23px;
   text-align: center;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.review {
+  scroll-snap-align: start;
 }
 
 .avatar {
