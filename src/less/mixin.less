@@ -15,9 +15,17 @@
 .default_button {
   display: grid;
   width: 290px;
+  padding: 18px 0;
+  font-size: 16px;
+  line-height: 22px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   color: @whitecolor;
   background: @darkcolor;
+
+  &:hover,
+  &:focus {
+    background-color: fade(@darkcolor, 80%);
+  }
 }
