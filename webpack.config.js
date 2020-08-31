@@ -18,24 +18,6 @@ module.exports = {
   devtool: "source-map",
   module: {
     rules: [
-      // {
-      //   test: /\.less$/,
-      //   use: [
-      //     "style-loader",
-      //     {
-      //       loader: "css-loader",
-      //       options: {
-      //         sourceMap: true,
-      //       },
-      //     },
-      //     {
-      //       loader: "less-loader",
-      //       options: {
-      //         sourceMap: true,
-      //       },
-      //     },
-      //   ],
-      // },
       {
         test: /\.less$/,
         use: [
@@ -50,16 +32,13 @@ module.exports = {
         ],
       },
       {
-        test: /\.(jpg|jpeg|png|woff|woff2|eot|ttf)$/,
-        loader: "url-loader?limit=100000",
-      },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(woff|woff2)$/,
         loader: "file-loader",
         options: {
           name: "[name].[ext]",
+          outputPath: "fonts/"
         },
-      },
+      }
     ],
   },
   plugins: [
@@ -68,7 +47,9 @@ module.exports = {
       inject: "body",
     }),
     new CopyWebpackPlugin({
-      patterns: [{ from: "./src/image", to: "image" }],
+      patterns: [
+        { from: "./src/image", to: "image" },
+      ],
     }),
     new MiniCssExtractPlugin()
   ],
