@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: `./src/app.js`,
@@ -14,25 +15,38 @@ module.exports = {
     port: 1337,
     historyApiFallback: true,
   },
-  devtool: "source-map", // any "source-map"-like devtool is possible
+  devtool: "source-map",
   module: {
     rules: [
+      // {
+      //   test: /\.less$/,
+      //   use: [
+      //     "style-loader",
+      //     {
+      //       loader: "css-loader",
+      //       options: {
+      //         sourceMap: true,
+      //       },
+      //     },
+      //     {
+      //       loader: "less-loader",
+      //       options: {
+      //         sourceMap: true,
+      //       },
+      //     },
+      //   ],
+      // },
       {
         test: /\.less$/,
         use: [
-          "style-loader",
           {
-            loader: "css-loader",
+            loader: MiniCssExtractPlugin.loader,
             options: {
               sourceMap: true,
             },
           },
-          {
-            loader: "less-loader",
-            options: {
-              sourceMap: true,
-            },
-          },
+          'css-loader',
+          'less-loader',
         ],
       },
       {
@@ -56,5 +70,6 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [{ from: "./src/image", to: "image" }],
     }),
+    new MiniCssExtractPlugin()
   ],
 };
