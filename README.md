@@ -1,2 +1,5 @@
 # spares-shop
-grid + flexbox
+- grid
+- flexbox
+- less
+- webpack
