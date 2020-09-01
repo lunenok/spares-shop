@@ -429,10 +429,21 @@ html {
 }
 @media (min-width: 768px) {
   .header__wrapper {
+    position: relative;
     margin: 0 auto;
     padding: 0 auto;
     padding-top: 85px;
     max-width: 992px;
+  }
+  .header__wrapper::before {
+    content: "";
+    position: absolute;
+    left: 67.4%;
+    top: 0;
+    width: 100vh;
+    height: 100%;
+    background-color: #fceae8;
+    z-index: -1;
   }
   .header__nav {
     order: 2;
@@ -704,8 +715,6 @@ html {
 @media (min-width: 768px) {
   .swiper {
     margin-bottom: 120px;
-    margin-top: -85px;
-    padding-top: 85px;
     background: linear-gradient(to right, #fff 0%, #fff 67.2%, #fceae8 67.2%, #fceae8 100%);
   }
   .swiper__wrapper {
