@@ -1,8 +1,17 @@
+.page-header {
+  position: relative;
+  overflow-x: visible;
+
+  @media (min-width: @tablet-width) {
+    overflow-x: hidden;
+  }
+}
+
 .header__wrapper {
   position: relative;
   display: flex;
   padding: 0 20px;
-  height: 64px;
+  min-height: 64px;
   align-items: center;
   z-index: 100;
 }
@@ -28,13 +37,13 @@
 
 @media (min-width: @tablet-width) {
   .header__wrapper {
-    position: relative;
+    // position: relative;
     margin: 0 auto;
     padding: 0 auto;
     padding-top: 85px;
     max-width: 992px;
 
-    &::before {
+    &::after {
       content: "";
       position: absolute;
       left: 67.4%;
